@@ -16,10 +16,10 @@ function SeriesOfVedio() {
 function captureVedio(name) {
     return new PiCamera({
         mode: 'video',
-        output: `${__dirname}/${name}.h264`,
+        output: `${__dirname}/video/${name}.h264`,
         width: 1920,
         height: 1080,
-        timeout: 10000,
+        timeout: 5000,
         nopreview: true,
     });
 }
