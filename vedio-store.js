@@ -17,10 +17,11 @@ function captureVedio(name) {
     return new PiCamera({
         mode: 'video',
         output: `${__dirname}/${name}.h264`,
-        width: 1920,
-        height: 1080,
-        timeout: 10000,
+        width: 640,
+        height: 360,
+        timeout: 300000,
         nopreview: true,
+        framerate: 24
     });
 }
 
