@@ -1,7 +1,7 @@
 const PiCamera = require('pi-camera');
 
 function SeriesOfVedio() {
-    const dateTime = new Date();
+    const dateTime = new Date().toISOString();
     const vedio = captureVedio(dateTime);
     vedio.record()
         .then((result) => {
@@ -19,7 +19,7 @@ function captureVedio(name) {
         output: `${__dirname}/${name}.h264`,
         width: 1920,
         height: 1080,
-        timeout: 5000,
+        timeout: 10000,
         nopreview: true,
     });
 }
